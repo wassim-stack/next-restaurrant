@@ -9,10 +9,12 @@ const GetData = async () => {
   const res = await fetch(`${apiUrl}/api/categories`, {
     cache: "no-store",
   });
-  if (!res.ok) {
-    throw new Error("failed");
+  if(!res.ok){
+    throw new Error("Failed!");
+    
   }
-  return res.json();
+
+  return res.json()
 };
 
 const MenuPage = async () => {
